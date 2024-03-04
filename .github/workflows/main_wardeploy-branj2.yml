@@ -42,6 +42,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
+
+      - name: Rename war to ROOT
+        run: mv azure-0.0.1-SNAPSHOT.war ROOT.war
       
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -49,5 +52,5 @@ jobs:
         with:
           app-name: 'wardeploy-branj2'
           slot-name: 'Production'
-          package: '*.war'
+          package: 'ROOT.war'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_83A4FE915C7848BE9E04824FEC8D538D }}
