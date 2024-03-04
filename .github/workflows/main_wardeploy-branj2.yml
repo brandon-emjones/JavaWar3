@@ -50,4 +50,4 @@ jobs:
           app-name: 'wardeploy-branj2'
           slot-name: 'Production'
           package: '*.war'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84D6F394F3324539A0AE303DB7538D18 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_83A4FE915C7848BE9E04824FEC8D538D }}
