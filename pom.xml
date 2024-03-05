@@ -41,29 +41,29 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
-		<plugin>
-			    <groupId>org.apache.cxf</groupId>
-			    <artifactId>cxf-codegen-plugin</artifactId>
-			    <version>4.0.0</version>
-			    <executions>
-			        <execution>
-			            <id>generate-sources</id>
-			            <phase>generate-sources</phase>
-			            <goals>
-			                <goal>wsdl2java</goal>
-			            </goals>
-			            <configuration>
-			                <sourceRoot>${basedir}/src/main/java</sourceRoot>
-			                <wsdlOptions>
-			                    <wsdlOption>
-			                        <wsdl>${basedir}/src/main/resources/wsdl/sample.wsdl</wsdl>
-			                    </wsdlOption>
-			                </wsdlOptions>
-			            </configuration>
-			        </execution>
-			    </executions>
+			<plugin>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-codegen-plugin</artifactId>
+				<version>4.0.0</version>
+				<executions>
+					<execution>
+						<id>generate-sources</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>wsdl2java</goal>
+						</goals>
+						<configuration>
+							<sourceRoot>${basedir}/src/main/java</sourceRoot>
+							<wsdlOptions>
+								<wsdlOption>
+									<wsdl>${basedir}/src/main/resources/wsdl/sample.wsdl</wsdl>
+								</wsdlOption>
+							</wsdlOptions>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
+		</plugins>
 		<finalName>ROOT</finalName>
 	</build>
 
